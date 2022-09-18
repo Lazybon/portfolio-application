@@ -1,14 +1,15 @@
 import Layout from './Components/Layout'
+import Header from "./Components/Header";
+
 
 const ToDoApp = () => {
+
   return (
     <Layout>
-      <div>Header</div>
+      <Header/>
       <div>
         <div>sidebar</div>
-        <main>
-          todo
-        </main>
+        <main>Main</main>
       </div>
     </Layout>
   )
