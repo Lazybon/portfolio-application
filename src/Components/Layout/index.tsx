@@ -13,6 +13,7 @@ const Overview = styled.div({
 const BaseLayout = styled.div(({ theme: { utils, palette } }) => {
   return {
     display: 'flex',
+    flexDirection: 'column',
     height: '100%',
     width: '100%',
     backgroundColor: palette.backgroundPrimary,
