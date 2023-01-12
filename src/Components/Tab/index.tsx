@@ -33,13 +33,13 @@ export const BaseTab = styled.div(({ theme: { utils, palette } }) => ({
   },
 }))
 
-interface Tab {
+export type TabProps = React.HTMLAttributes<HTMLDivElement> & {
   children?: React.ReactNode
   text?: string
   textStyleProps?: React.CSSProperties
 }
 
-export const Tab = ({ children, text, textStyleProps, ...otherProps }: Tab) => {
+export const Tab: React.FC<TabProps> = ({ children, text, textStyleProps, ...otherProps }) => {
   return (
     <BaseTab {...otherProps}>
       {children}

@@ -30,6 +30,11 @@ function App() {
 
           body {
             color: ${theme.palette.textPrimary};
+            overflow: hidden;
+          }
+
+          svg {
+            line-height: 16px;
           }
         `}
       />
