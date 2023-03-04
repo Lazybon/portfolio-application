@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react'
+import React from 'react'
 import styled from '@emotion/styled'
 import { animated, useSpring } from 'react-spring'
 
@@ -51,11 +51,11 @@ const Modal = ({
   isOpen,
   onClose,
   ...otherProps
-}: React.FC<HTMLAttributes<HTMLDivElement>> & ModalProps) => {
+}: ModalProps) => {
   const styles = useSpring({ opacity: isOpen ? 1 : 0 })
 
   return (
-    isOpen && (
+    isOpen ? (
       <>
         {!disableBackdrop && <Backdrop style={styles} onClick={onClose} />}
         <BaseModal style={styles} {...otherProps}>
@@ -63,7 +63,7 @@ const Modal = ({
           <ModalContent>{children}</ModalContent>
         </BaseModal>
       </>
-    )
+    ) : null
   )
 }
 
